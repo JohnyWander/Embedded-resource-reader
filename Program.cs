@@ -81,7 +81,7 @@ namespace dotnet_read_emb_res
             }
             else
             {
-
+                throw new Exception("No such option, try to use (1,2,3,4) or option_result_* ints");
             }
             
             

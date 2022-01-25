@@ -7,7 +7,7 @@ using System.Reflection;
 namespace dotnet_read_emb_res
 {
 
-    public static class static_read_embedded_resource_sync
+    public static class read_emb_resource
     {
         static public string result_string;
         static public Stream result_stream;
@@ -22,6 +22,8 @@ namespace dotnet_read_emb_res
 
         static private string get_resource_path(string res_name,Assembly executing_assembly)
         {
+            Console.WriteLine(executing_assembly.FullName);
+            Console.ReadKey();
             string output = executing_assembly.GetManifestResourceNames().Single(str => str.EndsWith(res_name));
             return output;
         }
@@ -55,9 +57,9 @@ namespace dotnet_read_emb_res
 
         }
 
-       public static void read_embedded_resource_sync(string resourcename,int option)
+       public static void read(string resourcename,int option)
         {
-            Assembly executing_assembly = Assembly.GetExecutingAssembly();
+            Assembly executing_assembly = Assembly.GetEntryAssembly();
             string name_of_resource = get_resource_path(resourcename, executing_assembly);
             Stream result_stream = executing_assembly.GetManifestResourceStream(name_of_resource);
 
@@ -107,7 +109,7 @@ namespace dotnet_read_emb_res
     {
         static void Main(string[] args)
         {
-           static_read_embedded_resource_sync.read_embedded_resource_sync("grumpy_cat.jpg",static_read_embedded_resource_sync.option_result_string);
+          read_emb_resource.read("grumpy_cat.jpg",static_read_embedded_resource_sync.option_result_string);
             static_read_embedded_resource_sync.read_embedded_resource_sync("grumpy_cat.jpg", static_read_embedded_resource_sync.option_result_stream);
 
           //  Console.WriteLine(static_read_embedded_resource_sync.result_string);
@@ -128,5 +130,5 @@ namespace dotnet_read_emb_res
 
         }
     }
-    */
+ */   
 }

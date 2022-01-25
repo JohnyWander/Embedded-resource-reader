@@ -7,12 +7,4 @@
     <StartupObject />
   </PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="grumpy_cat.jpg" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Include="grumpy_cat.jpg" />
-  </ItemGroup>
-
 </Project>

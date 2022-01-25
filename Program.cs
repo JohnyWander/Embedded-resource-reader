@@ -16,7 +16,7 @@ namespace dotnet_read_emb_res
         static public readonly int option_result_string = 1;
         static public readonly int option_result_stream = 2;
         static public readonly int option_result_byte_array = 3;
-        static public readonly int option_all = 4;
+        static public readonly int option_result_all = 4;
 
 
 
@@ -73,7 +73,16 @@ namespace dotnet_read_emb_res
             {
                 read_to_byte_array(result_stream);
             }
-            
+            else if(option == 4)
+            {
+                read_to_string(result_stream);
+                read_to_stream(result_stream);
+                read_to_byte_array(result_stream);//
+            }
+            else
+            {
+
+            }
             
             
 

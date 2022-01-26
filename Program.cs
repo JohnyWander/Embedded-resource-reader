@@ -17,7 +17,7 @@ namespace dotnet_read_emb_res
         static public string result_string;
         static public Stream result_stream;
         static public byte[] result_byte_array;
-        static private readonly bool dontmindme=false;
+      //  static private readonly bool dontmindme=false;
         static public readonly int option_result_string = 1;
         static public readonly int option_result_stream = 2;
         static public readonly int option_result_byte_array = 3;
@@ -104,7 +104,7 @@ namespace dotnet_read_emb_res
         static public string result_string;
         static public Stream result_stream;
         static public byte[] result_byte_array;
-        static private readonly bool dontmindme = false;
+      //  static private readonly bool dontmindme = false;
         static public readonly int option_result_string = 1;
         static public readonly int option_result_stream = 2;
         static public readonly int option_result_byte_array = 3;
@@ -171,9 +171,9 @@ namespace dotnet_read_emb_res
 
         public static async Task read(string resourcename, int option)
         {
-            await Task.Run( async() =>
+            await Task.Run(async () =>
             {
-
+              //  Console.WriteLine("ASYNC");
 
                 Assembly executing_assembly = Assembly.GetEntryAssembly();
                 Task<string> res_of_get_resource=get_resource_path(resourcename, executing_assembly);
@@ -183,21 +183,21 @@ namespace dotnet_read_emb_res
 
                 if (option == 1)
                 {
-                    read_to_string(result_stream);
+                   await read_to_string(result_stream);
                 }
                 else if (option == 2)
                 {
-                    read_to_stream(result_stream);
+                   await read_to_stream(result_stream);
                 }
                 else if (option == 3)
                 {
-                    read_to_byte_array(result_stream);
+                   await read_to_byte_array(result_stream);
                 }
                 else if (option == 4)
                 {
-                    read_to_string(result_stream);
-                    read_to_stream(result_stream);
-                    read_to_byte_array(result_stream);//
+                    await read_to_string(result_stream);
+                    await read_to_stream(result_stream);
+                    await read_to_byte_array(result_stream);//
                 }
                 else
                 {
@@ -206,8 +206,7 @@ namespace dotnet_read_emb_res
 
 
 
-            //    Thread.Sleep(5000);
-              //  Console.WriteLine("wykonano");
+                
 
 
             });

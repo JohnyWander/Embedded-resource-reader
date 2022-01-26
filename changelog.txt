@@ -1,3 +1,5 @@
 v1.0 First release- should work propertly
 v1.1 it didn't work :))- Changed GetExecutingAssembly() to GetEntryAssembly()
 v1.2 simplified function/class names/ removed debug like stuff
+
+v2.0 Added asynchronous version of read_emb_resource class

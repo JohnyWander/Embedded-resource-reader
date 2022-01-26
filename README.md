@@ -8,7 +8,7 @@ reading embedded resource with example name grumpy_cat.jpg
 ###################################
 
 
-read_emb_resource.read(grumpy_cat.jpg,read_emb_resource.option_result_string); // Converts embedded file to string
+read_emb_resource.read(grumpy_cat.jpg,read_emb_resource.option_result_string); // Converts embedded file to string <br>
 string s = read_emb_resource.result_string // which is here
 
 

@@ -12,7 +12,7 @@ namespace dotnet_read_emb_res
         static public string result_string;
         static public Stream result_stream;
         static public byte[] result_byte_array;
-
+        
         static public readonly int option_result_string = 1;
         static public readonly int option_result_stream = 2;
         static public readonly int option_result_byte_array = 3;
@@ -22,8 +22,7 @@ namespace dotnet_read_emb_res
 
         static private string get_resource_path(string res_name,Assembly executing_assembly)
         {
-            Console.WriteLine(executing_assembly.FullName);
-            Console.ReadKey();
+            
             string output = executing_assembly.GetManifestResourceNames().Single(str => str.EndsWith(res_name));
             return output;
         }

@@ -3,7 +3,7 @@ Simple c# lib for reading embedded resources in .NET apps, using System.Reflecti
 
 
 USAGE:
-reading embedded resource with name grumpy_cat.jpg
+reading embedded resource with example name grumpy_cat.jpg
 
 ###################################
 

@@ -29,7 +29,7 @@ read_emb_resource.read("grumpy_cat.jpg",read_emb_resource.option_result_all); //
  reading embedderdresource ASYNCHROUNOUSLY -- again grumpy_cat.jgp
  
  Task task = read_em read_emb_resource_async.read("grumpy_cat.jpg",read_emb_resource.option_result_string);<br>
- // Code to do during resource read
+ // Code to do during resource read<br>
  //
  //
  await task

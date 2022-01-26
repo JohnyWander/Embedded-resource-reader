@@ -31,7 +31,7 @@ read_emb_resource.read("grumpy_cat.jpg",read_emb_resource.option_result_all); //
  Task task = read_em read_emb_resource_async.read("grumpy_cat.jpg",read_emb_resource.option_result_string);<br>
  // Code to do during resource read<br>
  //<br>
- //<br<
+ //<br>
  await task;<br>
  
  // Code to run after resource read

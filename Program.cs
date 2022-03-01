@@ -63,6 +63,10 @@ namespace dotnet_read_emb_res
 
        public static void read(string resourcename,int option)
         {
+
+            
+
+
             Assembly executing_assembly = Assembly.GetEntryAssembly();
             string name_of_resource = get_resource_path(resourcename, executing_assembly);
             Stream result_stream = executing_assembly.GetManifestResourceStream(name_of_resource);
@@ -169,13 +173,24 @@ namespace dotnet_read_emb_res
 
 
 
-        public static async Task read(string resourcename, int option)
+        public static async Task read(string resourcename, int option, bool local_read=false)
         {
             await Task.Run(async () =>
             {
-              //  Console.WriteLine("ASYNC");
 
                 Assembly executing_assembly = Assembly.GetEntryAssembly();
+
+                if(local_read == true)
+                {
+                    executing_assembly = Assembly.GetExecutingAssembly();
+                }
+              
+
+
+
+
+
+           
                 Task<string> res_of_get_resource=get_resource_path(resourcename, executing_assembly);
                
                 string name_of_resource = res_of_get_resource.Result.ToString();

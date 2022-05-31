@@ -1,4 +1,4 @@
-# cs_read_emb_res
+# Embedded resource reader
 Simple c# lib for reading embedded resources in .NET apps, using System.Reflection
 
 

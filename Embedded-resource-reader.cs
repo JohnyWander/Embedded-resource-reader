@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using System.Threading;
 using System.Reflection;
 
-namespace dotnet_read_emb_res
+namespace Embedded_resource_reader
 {
 
     

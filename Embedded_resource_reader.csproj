@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <ApplicationIcon />
+    <StartupObject />
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Copyright>JohnyWander</Copyright>
+    <Description>Simple lib for reading Embedded resources in c# apps</Description>
+    <PackageProjectUrl>https://github.com/JohnyWander/Embedded-resource-reader</PackageProjectUrl>
+    <PackageLicenseFile>license.txt</PackageLicenseFile>
+    <Authors>JohnyWander</Authors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="C:\Users\P0407026\Documents\license.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
